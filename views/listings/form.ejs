@@ -1,0 +1,63 @@
+<% layout("/layouts/boilerplate") %>
+     <br>
+    <h3>create new listing</h3>
+    <br>
+    <div class="row">
+        <div class="col-8 offset-2">
+    <form action="/listings" method="post"  class="needs-validation" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" name="listing[title]" placeholder="enter title" class="form-control  form-title"  required>
+            <div >
+                 <p class="titlefeedback">
+
+                 </p>
+              </div>
+        </div>
+       
+       
+
+        <div class="mb-3">
+            <label for="image" class="form-label">Upload listing Image</label>
+            <input type="file" name="listing[image]" class="form-control">
+        </div>
+
+
+        <div class="row">
+        <div class="mb-3 col-md-4">
+            <label for="price" class="form-label">Price</label>
+            <input type="number" name="listing[price]" placeholder="1200" class="form-control form-price" required>
+            <div >
+                <p class="pricefeedback">
+
+                </p>
+             </div>
+        </div>
+        
+        <div class="mb-3 col-md-8">
+            <label for="country" class="form-label">Country</label>
+            <input type="text" name="listing[country]" placeholder="india" class="form-control form-country form-country" required>
+            <div >
+                <p class="countryfeedback">
+
+                </p>
+             </div>
+        </div>
+        </div>
+      <div class="mb-3">
+        <label for="location" class="form-label">Location</label>
+        <input type="text" name="listing[location]" placeholder="chennai" class="form-control form-location" required>
+        <div >
+            <p class="locationfeedback">
+
+            </p>
+         </div>
+      </div>
+      
+      <br>
+      <br>
+        <button class="btn btn-dark add-btn">add</button>
+    </form>
+        </div>
+    </div>
+
