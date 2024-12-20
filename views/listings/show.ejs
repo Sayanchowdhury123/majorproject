@@ -99,11 +99,13 @@
                         </p>
                        
                        
-
+                        <% if (curruser && curruser._id.equals(listing.owner._id)) { %>
+                         
                         <form action="/listings/<%= listing._id %>/reviews/<%= review._id %>?_method=DELETE"
                             class="mb-3" method="post">
                             <button class="btn btn-sm btn-dark">Delete</button>
                         </form>
+                        <% } %>
                     </div>
                 </div>
                 <% } %>
